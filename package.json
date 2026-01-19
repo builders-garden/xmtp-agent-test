@@ -1,0 +1,37 @@
+{
+  "name": "test-xmtp",
+  "version": "1.0.0",
+  "exports": "./dist/index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "dev": "tsx watch ./src/index.ts",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "check": "biome check --write .",
+    "format": "npx @biomejs/biome format --write ./src",
+    "format:check": "npx @biomejs/biome check --write ./src",
+    "gen:keys": "pnpm build && node ./dist/utils/generate-keys.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "packageManager": "pnpm@10.25.0+sha512.5e82639027af37cf832061bcc6d639c219634488e0f2baebe785028a793de7b525ffcd3f7ff574f5e9860654e098fe852ba8ac5dd5cefe1767d23a020a92f501",
+  "dependencies": {
+    "@xmtp/agent-sdk": "^1.2.4",
+    "@xmtp/content-type-markdown": "^1.0.0",
+    "@xmtp/content-type-primitives": "^3.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.11",
+    "@types/node": "^25.0.9",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "ultracite": "^7.0.11"
+  }
+}
