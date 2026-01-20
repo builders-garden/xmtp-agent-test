@@ -4,6 +4,10 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@xmtp/node-bindings': 1.9.0
+  '@xmtp/content-type-primitives': 3.0.0
+
 importers:
 
   .:
@@ -15,8 +19,11 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
       '@xmtp/content-type-primitives':
-        specifier: ^3.0.0
+        specifier: 3.0.0
         version: 3.0.0
+      '@xmtp/node-bindings':
+        specifier: 1.9.0
+        version: 1.9.0
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.3.11
@@ -338,9 +345,6 @@ packages:
   '@xmtp/content-type-markdown@1.0.0':
     resolution: {integrity: sha512-B0Pevjjxf+Nps8MyMXEklp7jzcwIH42tFzT3FlGTiOSh/0g3o8SgkxPETKGK/ifL5vjV0u4AzeJsgTEbHl/d6Q==}
 
-  '@xmtp/content-type-primitives@2.0.3':
-    resolution: {integrity: sha512-JOTaNHhcqNO1uAZV9wE8TLEtEgMApuzuoAKMuMRXsKXfAb86G7Pe84moVsr20r7VaIqDjhDlzPw1GYYs7DMODw==}
-
   '@xmtp/content-type-primitives@3.0.0':
     resolution: {integrity: sha512-gxK6+k0ywOz39LFJjrUF3fOXWXR3aAmIkF7e0rFz7c27izDimZC5E2oja9iz/CYyzDS6lf9Pm31qRcGTMSYaHg==}
 
@@ -365,12 +369,8 @@ packages:
   '@xmtp/content-type-wallet-send-calls@2.0.0':
     resolution: {integrity: sha512-212g68DjwFMh3gaAwULJvrhpuje6Tp4rF94oy3lQRvnXCQ+xLkyDi8pT5Pyw3Dm6jW+ke1U0hauzV7sLCgIFSw==}
 
-  '@xmtp/node-bindings@1.6.8':
-    resolution: {integrity: sha512-2yZvemWzzkG3Z5rDZSXDhoIhqOaMR7fdNiWyVxXdAfmTL73lyWQMl+J/kJfvXMmLnWcp9get9zqZZnVj1lnQCg==}
-    engines: {node: '>=22'}
-
-  '@xmtp/node-bindings@1.8.0':
-    resolution: {integrity: sha512-dyppg1pQNsEdGH13RfsbkbXdnUdjufak6ea1YahjCROgmaJClDpMHcMcSfMzoJzASanU58MwEdCgYUF638NKgw==}
+  '@xmtp/node-bindings@1.9.0':
+    resolution: {integrity: sha512-V24wUd8eXnvdb/lSvA3zZko6lGUbJSCWkS2gf8dyj0MWEP+deIhj/Py/UP5kYBju7JyOKftiUVKQRf8RkgDuGA==}
     engines: {node: '>=22'}
 
   '@xmtp/node-sdk@4.6.0':
@@ -785,62 +785,56 @@ snapshots:
 
   '@xmtp/content-type-group-updated@2.0.3':
     dependencies:
-      '@xmtp/content-type-primitives': 2.0.3
+      '@xmtp/content-type-primitives': 3.0.0
       '@xmtp/proto': 3.78.0
 
   '@xmtp/content-type-markdown@1.0.0':
     dependencies:
-      '@xmtp/content-type-primitives': 2.0.3
-
-  '@xmtp/content-type-primitives@2.0.3':
-    dependencies:
-      '@xmtp/proto': 3.78.0
+      '@xmtp/content-type-primitives': 3.0.0
 
   '@xmtp/content-type-primitives@3.0.0':
     dependencies:
-      '@xmtp/node-bindings': 1.8.0
+      '@xmtp/node-bindings': 1.9.0
 
   '@xmtp/content-type-reaction@2.0.2':
     dependencies:
-      '@xmtp/content-type-primitives': 2.0.3
+      '@xmtp/content-type-primitives': 3.0.0
 
   '@xmtp/content-type-read-receipt@2.0.2':
     dependencies:
-      '@xmtp/content-type-primitives': 2.0.3
+      '@xmtp/content-type-primitives': 3.0.0
 
   '@xmtp/content-type-remote-attachment@2.0.4':
     dependencies:
       '@noble/secp256k1': 2.3.0
-      '@xmtp/content-type-primitives': 2.0.3
+      '@xmtp/content-type-primitives': 3.0.0
       '@xmtp/proto': 3.78.0
 
   '@xmtp/content-type-reply@2.0.3':
     dependencies:
-      '@xmtp/content-type-primitives': 2.0.3
+      '@xmtp/content-type-primitives': 3.0.0
       '@xmtp/proto': 3.78.0
 
   '@xmtp/content-type-text@2.0.2':
     dependencies:
-      '@xmtp/content-type-primitives': 2.0.3
+      '@xmtp/content-type-primitives': 3.0.0
 
   '@xmtp/content-type-transaction-reference@2.0.2':
     dependencies:
-      '@xmtp/content-type-primitives': 2.0.3
+      '@xmtp/content-type-primitives': 3.0.0
 
   '@xmtp/content-type-wallet-send-calls@2.0.0':
     dependencies:
-      '@xmtp/content-type-primitives': 2.0.3
+      '@xmtp/content-type-primitives': 3.0.0
 
-  '@xmtp/node-bindings@1.6.8': {}
-
-  '@xmtp/node-bindings@1.8.0': {}
+  '@xmtp/node-bindings@1.9.0': {}
 
   '@xmtp/node-sdk@4.6.0':
     dependencies:
       '@xmtp/content-type-group-updated': 2.0.3
-      '@xmtp/content-type-primitives': 2.0.3
+      '@xmtp/content-type-primitives': 3.0.0
       '@xmtp/content-type-text': 2.0.2
-      '@xmtp/node-bindings': 1.6.8
+      '@xmtp/node-bindings': 1.9.0
 
   '@xmtp/proto@3.78.0':
     dependencies:

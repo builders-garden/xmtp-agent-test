@@ -1,19 +1,20 @@
-import {
-	type ContentCodec,
-	ContentTypeId,
-	type EncodedContent,
+import type {
+	ContentCodec,
+	EncodedContent,
 } from "@xmtp/content-type-primitives";
+import { type ContentTypeId, contentTypeIntent } from "@xmtp/node-bindings";
 
 /**
  * Content Type ID for Intent messages
  * Following XIP-67 specification for inline actions user interactions
  */
-export const ContentTypeIntent = new ContentTypeId({
+export let ContentTypeIntent = contentTypeIntent();
+ContentTypeIntent = {
 	authorityId: "coinbase.com",
 	typeId: "intent",
 	versionMajor: 1,
 	versionMinor: 0,
-});
+};
 
 /**
  * Intent content structure

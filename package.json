@@ -21,11 +21,11 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "packageManager": "pnpm@10.25.0+sha512.5e82639027af37cf832061bcc6d639c219634488e0f2baebe785028a793de7b525ffcd3f7ff574f5e9860654e098fe852ba8ac5dd5cefe1767d23a020a92f501",
   "dependencies": {
     "@xmtp/agent-sdk": "^1.2.4",
     "@xmtp/content-type-markdown": "^1.0.0",
-    "@xmtp/content-type-primitives": "^3.0.0"
+    "@xmtp/content-type-primitives": "^3.0.0",
+    "@xmtp/node-bindings": "1.9.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.11",
@@ -33,5 +33,12 @@
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "ultracite": "^7.0.11"
+  },
+  "packageManager": "pnpm@10.25.0+sha512.5e82639027af37cf832061bcc6d639c219634488e0f2baebe785028a793de7b525ffcd3f7ff574f5e9860654e098fe852ba8ac5dd5cefe1767d23a020a92f501",
+  "pnpm": {
+    "overrides": {
+      "@xmtp/node-bindings": "1.9.0",
+      "@xmtp/content-type-primitives": "3.0.0"
+    }
   }
 }

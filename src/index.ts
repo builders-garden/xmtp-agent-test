@@ -1,9 +1,6 @@
 import { Agent, type MessageContext } from "@xmtp/agent-sdk";
 import { getTestUrl } from "@xmtp/agent-sdk/debug";
-import {
-	ContentTypeMarkdown,
-	MarkdownCodec,
-} from "@xmtp/content-type-markdown";
+import { ContentTypeMarkdown } from "@xmtp/content-type-markdown";
 import { loadEnvFile } from "./utils/general.js";
 import {
 	ActionBuilder,
@@ -104,7 +101,7 @@ XMTP is the largest & most secure decentralized messaging network. Powers a rapi
 	};
 	const agent = await Agent.createFromEnv({
 		dbPath,
-		codecs: [new ActionsCodec(), new IntentCodec(), new MarkdownCodec()],
+		codecs: [new ActionsCodec(), new IntentCodec()],
 	});
 
 	// Register action handlers
